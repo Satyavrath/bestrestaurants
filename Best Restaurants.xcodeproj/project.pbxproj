@@ -14,6 +14,7 @@
 		1288A7DB21275A5D00B5E666 /* Restaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1288A7DA21275A5D00B5E666 /* Restaurants.swift */; };
 		12A0122221237C3C008CB080 /* RestaurantsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A0122121237C3C008CB080 /* RestaurantsTableViewController.swift */; };
 		377B459D22259C9F007FEC2B /* ResturantDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377B459C22259C9F007FEC2B /* ResturantDetailsViewController.swift */; };
+		379EFA66222ED90A00A5FA1A /* NewRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379EFA65222ED90A00A5FA1A /* NewRestaurantViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1288A7DE2128789E00B5E666 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12A0122121237C3C008CB080 /* RestaurantsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsTableViewController.swift; sourceTree = "<group>"; };
 		377B459C22259C9F007FEC2B /* ResturantDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantDetailsViewController.swift; sourceTree = "<group>"; };
+		379EFA65222ED90A00A5FA1A /* NewRestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRestaurantViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				1212C025212322B500479A05 /* Assets.xcassets */,
 				1212C027212322B500479A05 /* LaunchScreen.storyboard */,
 				1288A7DE2128789E00B5E666 /* Info.plist */,
+				379EFA65222ED90A00A5FA1A /* NewRestaurantViewController.swift */,
 			);
 			path = "Best Restaurants";
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			files = (
 				377B459D22259C9F007FEC2B /* ResturantDetailsViewController.swift in Sources */,
 				1288A7DB21275A5D00B5E666 /* Restaurants.swift in Sources */,
+				379EFA66222ED90A00A5FA1A /* NewRestaurantViewController.swift in Sources */,
 				12A0122221237C3C008CB080 /* RestaurantsTableViewController.swift in Sources */,
 				1212C01F212322B400479A05 /* AppDelegate.swift in Sources */,
 			);

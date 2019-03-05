@@ -36,7 +36,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="nhz-z1-QYr" kind="show" id="7Dg-EY-uWv"/>
+                                    <segue destination="nhz-z1-QYr" kind="show" identifier="restaurantCell" id="7Dg-EY-uWv"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -45,11 +45,116 @@
                             <outlet property="delegate" destination="7QQ-KO-y7d" id="luc-JQ-oma"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Restaurants" id="cIu-Op-Nnh"/>
+                    <navigationItem key="navigationItem" title="Restaurants" id="cIu-Op-Nnh">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="yOe-KW-tZ3">
+                            <connections>
+                                <segue destination="tE8-MJ-xBB" kind="presentation" id="uVi-yc-fo3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="672-eh-ysU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1192.8" y="-642.72863568215894"/>
+        </scene>
+        <!--New Restaurant View Controller-->
+        <scene sceneID="oeR-YZ-8o7">
+            <objects>
+                <viewController id="tE8-MJ-xBB" customClass="NewRestaurantViewController" customModule="BestRestaurants" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AWV-Fb-hmn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hmN-YF-ei2">
+                                <rect key="frame" x="0.0" y="49" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="New Resturant" id="sqm-aW-OUz">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="vwa-XF-gOZ">
+                                            <connections>
+                                                <action selector="cancel:" destination="tE8-MJ-xBB" id="YQS-nj-b0x"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="pSe-hk-V9y">
+                                            <connections>
+                                                <action selector="done:" destination="tE8-MJ-xBB" id="lNj-VN-5LT"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ7-lC-iuT">
+                                <rect key="frame" x="33" y="167" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csh-Eg-uCC">
+                                <rect key="frame" x="33" y="240" width="47" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYX-g7-X8v">
+                                <rect key="frame" x="33" y="298" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GVa-yh-Pyy">
+                                <rect key="frame" x="102" y="162" width="257" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kXi-ag-CKG">
+                                <rect key="frame" x="102" y="235" width="257" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lg8-nW-sVk">
+                                <rect key="frame" x="102" y="293" width="257" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TYX-g7-X8v" firstAttribute="top" secondItem="Csh-Eg-uCC" secondAttribute="bottom" constant="37" id="3eO-PM-bc4"/>
+                            <constraint firstItem="Csh-Eg-uCC" firstAttribute="top" secondItem="ZJ7-lC-iuT" secondAttribute="bottom" constant="52" id="4Dw-2T-6vH"/>
+                            <constraint firstItem="Csh-Eg-uCC" firstAttribute="centerY" secondItem="kXi-ag-CKG" secondAttribute="centerY" id="5Md-DC-KAZ"/>
+                            <constraint firstAttribute="trailing" secondItem="hmN-YF-ei2" secondAttribute="trailing" id="8KU-9C-rPD"/>
+                            <constraint firstItem="GVa-yh-Pyy" firstAttribute="leading" secondItem="kXi-ag-CKG" secondAttribute="leading" id="9gw-ar-0ps"/>
+                            <constraint firstItem="Lg8-nW-sVk" firstAttribute="leading" secondItem="TYX-g7-X8v" secondAttribute="trailing" constant="20" id="BG0-He-Rr3"/>
+                            <constraint firstItem="kXi-ag-CKG" firstAttribute="top" secondItem="GVa-yh-Pyy" secondAttribute="bottom" constant="43" id="Cue-dw-BT9"/>
+                            <constraint firstItem="TYX-g7-X8v" firstAttribute="centerY" secondItem="Lg8-nW-sVk" secondAttribute="centerY" id="DI6-5M-lxN"/>
+                            <constraint firstItem="ZJ7-lC-iuT" firstAttribute="leading" secondItem="BG6-UK-xZb" secondAttribute="leading" constant="33" id="Fsn-TS-mO0"/>
+                            <constraint firstItem="Lg8-nW-sVk" firstAttribute="top" secondItem="kXi-ag-CKG" secondAttribute="bottom" constant="28" id="HXp-zc-E6Q"/>
+                            <constraint firstItem="GVa-yh-Pyy" firstAttribute="trailing" secondItem="AWV-Fb-hmn" secondAttribute="trailingMargin" id="Jpq-ar-hnh"/>
+                            <constraint firstItem="kXi-ag-CKG" firstAttribute="trailing" secondItem="Lg8-nW-sVk" secondAttribute="trailing" id="M08-Vh-3hA"/>
+                            <constraint firstItem="ZJ7-lC-iuT" firstAttribute="centerY" secondItem="GVa-yh-Pyy" secondAttribute="centerY" id="QwR-Pl-PK9"/>
+                            <constraint firstItem="ZJ7-lC-iuT" firstAttribute="top" secondItem="hmN-YF-ei2" secondAttribute="bottom" constant="74" id="RMW-ir-vLC"/>
+                            <constraint firstItem="ZJ7-lC-iuT" firstAttribute="leading" secondItem="Csh-Eg-uCC" secondAttribute="leading" id="bRE-eu-kT9"/>
+                            <constraint firstItem="Csh-Eg-uCC" firstAttribute="leading" secondItem="TYX-g7-X8v" secondAttribute="leading" id="eWe-zm-oYt"/>
+                            <constraint firstItem="BG6-UK-xZb" firstAttribute="bottom" secondItem="TYX-g7-X8v" secondAttribute="bottom" constant="348" id="hjP-m0-hjb"/>
+                            <constraint firstItem="GVa-yh-Pyy" firstAttribute="top" secondItem="hmN-YF-ei2" secondAttribute="bottom" constant="69" id="psJ-d7-UxW"/>
+                            <constraint firstItem="GVa-yh-Pyy" firstAttribute="trailing" secondItem="kXi-ag-CKG" secondAttribute="trailing" id="q81-ZV-cqj"/>
+                            <constraint firstItem="hmN-YF-ei2" firstAttribute="leading" secondItem="AWV-Fb-hmn" secondAttribute="leading" id="qfi-t3-hFc"/>
+                            <constraint firstItem="hmN-YF-ei2" firstAttribute="top" secondItem="BG6-UK-xZb" secondAttribute="top" constant="29" id="uAA-gl-CvA"/>
+                            <constraint firstItem="kXi-ag-CKG" firstAttribute="leading" secondItem="Lg8-nW-sVk" secondAttribute="leading" id="upn-n3-MvO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BG6-UK-xZb"/>
+                    </view>
+                    <connections>
+                        <outlet property="genreTF" destination="kXi-ag-CKG" id="qNd-Kd-lx9"/>
+                        <outlet property="nameTF" destination="GVa-yh-Pyy" id="7ch-a6-sbk"/>
+                        <outlet property="ratingTF" destination="Lg8-nW-sVk" id="ALp-QN-kQS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gHW-qB-OPi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1194.4000000000001" y="105.69715142428787"/>
         </scene>
         <!--Resturant Details View Controller-->
         <scene sceneID="BUa-xT-t5x">
